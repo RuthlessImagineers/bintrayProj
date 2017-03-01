@@ -80,10 +80,16 @@ def String getAppJson(String fileName) {
 
 task runFragmentation(dependsOn: ['optimusSetup', 'classes']) {
     doLast {
-        List<String> udidList = getDevicesForThisTestRun()
-        println udidList
-        runDeviceFragmentation(udidList)
-        killRedisServer()
+        try {
+            List<String> udidList = getDevicesForThisTestRun()
+            println udidList
+            runDeviceFragmentation(udidList)
+            killRedisServer()
+        } catch (Exception e) {
+
+        } finally {
+            killRedisServer()
+        }
     }
 }
 
@@ -120,24 +126,25 @@ def runDeviceFragmentation(List<String> udidList) {
 task runDistribution(dependsOn: ['optimusSetup', 'clean', 'featureCollector']) {
     featureCollector.outputs.upToDateWhen { false }
     doLast {
-        List<String> udidList = getDevicesForThisTestRun()
-
-        def fileDirectory = tasks.featureCollector.outputs;
-        FileCollection fileCollection = fileDirectory.getFiles();
-        List<File> list = fileCollection.asList();
-        println "Runnable Features are available in this path -- " + list.get(0).getAbsolutePath();
-        File file = list.get(0);
-        runFunctionalDistribution(udidList, file.listFiles())
-        killRedisServer
+        try {
+            List<String> udidList = getDevicesForThisTestRun()
+            def fileDirectory = tasks.featureCollector.outputs;
+            FileCollection fileCollection = fileDirectory.getFiles();
+            List<File> list = fileCollection.asList();
+            println "Runnable Features are available in this path -- " + list.get(0).getAbsolutePath();
+            File file = list.get(0);
+        } catch(Exception e) {
+            e.printStackTrace()
+        } finally {
+            killRedisServer()
+        }
     }
 }
 
 
 def runFunctionalDistribution(List<String> udidList, File[] allFiles) {
-
     def size = udidList.size()
     println "pool size -- " + size
-
     GParsPool.withPool(size) {
         allFiles.eachParallel { File file ->
             javaexec {
@@ -177,12 +184,10 @@ task reportFragmentation() {
 def generateReport(Boolean isFragmentation) {
     def jsonReports = fileTree(dir: "${reporting.baseDir}/cucumber/").include '**/*.json'.toString()
     File reportOutputDirectory = new File("${reporting.baseDir}/cucumber");
-
     List<String> jsonReportFiles = new ArrayList<String>();
     jsonReports.each { File file ->
         jsonReportFiles.add("${reporting.baseDir}/cucumber/${file.name}".toString());
     }
-
     String buildNumber = DateFormat.instance.format(new Date())
     String projectName = "cucumberProject";
     boolean runWithJenkins = false;
@@ -208,8 +213,14 @@ runFragmentation.finalizedBy(reportFragmentation)
 def RedisServer redisServer;
 task startRedisServer() {
     doLast{
-        redisServer = new RedisServer();
-        redisServer.start();
+        try {
+            redisServer = new RedisServer();
+            redisServer.start();
+        } catch(Exception e) {
+
+        } finally {
+            redisServer.stop();
+        }
     }
 }
 
