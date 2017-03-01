@@ -1,0 +1,65 @@
+{
+
+  "luggage" : {
+    "smallSuitcase" : 0,
+    "mediumSuitcase": 8,
+    "largeSuitcase" : 0,
+    "backpack" : 0
+  },
+
+  "outdoorItems" : {
+    "tent" : 0,
+    "campingBag" : 1,
+    "pairOfSkis" : 0,
+    "snowBoard"  : 0,
+    "bike" : 0,
+    "bikeBox" : 0,
+    "golfBag" : 0
+  },
+
+  "childItems": {
+    "childsPram" : 0,
+    "childsFoldablePushChair" : 0,
+    "rearFacingChildSeat" : 0,
+    "forwardFacingChildSeat" : 0,
+    "childBoosterSeat" : 0
+  },
+
+  "boxes" : {
+    "smallBox" : 0,
+    "mediumBox": 0,
+    "largeBox" :0,
+    "xlBox" : 0
+  },
+
+  "householdItems" : {
+    "tvBelowThirtyInches":0,
+    "tvBtwThirtyAndSixtyInches":0,
+    "ironingBoard":0,
+    "binLinerForClothes":0,
+    "bedding":0,
+    "musicSpeaker":0,
+    "mirror":0,
+    "chestOfDrawers":0,
+    "rug":0,
+    "singleMattress":0,
+    "bedSideTable":0,
+    "microwaveOven":0,
+    "vacuumCleaner":0,
+    "tvStand":0,
+    "largeMusicalInstrumentCase":0
+  },
+
+  "foldedWheelChair" : {
+    "foldedWheelChair":0
+  },
+
+  "pets" : {
+    "catInCage":0,
+    "smallDogInCage":0,
+    "largeDog":0,
+    "otherLargePet":0,
+    "otherSmallPetInCage":0
+  }
+
+}

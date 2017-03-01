@@ -1,0 +1,35 @@
+{
+  "card": [
+    {
+      "name":"AmericanExpress",
+      "cardNo":"378734493671000"
+    },
+    {
+      "name":"VisaCredit",
+      "cardNo":"4000111111111115"
+    },
+    {
+      "name":"VisaDebit",
+      "cardNo":"4000111111111115"
+    },
+    {
+      "name":"VisaElectron",
+      "cardNo":"4000111111111115"
+    },
+    {
+      "name":"MasterCardDebit",
+      "cardNo":"5105105105105100"
+    },
+    {
+      "name":"MasterCardCredit",
+      "cardNo":"5105105105105100"
+    } ],
+  "expiryDate": {
+    "month":"Dec",
+    "year":"2020"
+  },
+  "cvvCode":"1234",
+  "firstName" : "Test",
+  "lastName" :"Data",
+  "postcode":"W1F0UR"
+}

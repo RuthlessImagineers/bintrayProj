@@ -1,0 +1,39 @@
+{
+  "singleJourney": {
+    "pickup":"Elgin Rail Station",
+    "dropoff":"Dr Gray's Hospital",
+    "pickupDate":"tomorrow",
+    "pickupTime":"06:30",
+    "passengers":4 //Its adviced to choose passengers from 2-4 or maximum 8. Choose passengers 5-7 at your own risk
+  },
+  "returnJourney":{
+    "pickup":"Elgin Rail Station",
+    "dropoff":"Dr Gray's Hospital",
+    "pickupDate":"tomorrow",
+    "pickupTime":"06:30",
+    "returnDate":"tomorrow",
+    "returnTime":"06:50",
+    "passengers":4
+  },
+  "journeyWithVia":{
+    "pickup":"Elgin Rail Station",
+    "dropoff":"Dr Gray's Hospital",
+    "pickupDate":"tomorrow",
+    "pickupTime":"06:30",
+    "passengers":4,
+    "vias": [
+      {
+        "location": "Elgin rail/train station (IV30 1QJ)"
+      },
+      {
+        "buildingNumber": "183",
+        "location": "Ben Newe House, Elgin Road"
+      }
+
+    ]
+
+  }
+
+
+
+}

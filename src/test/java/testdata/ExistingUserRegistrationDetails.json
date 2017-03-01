@@ -1,0 +1,14 @@
+{
+  "yourDetails": {
+    "title":"Mr",
+    "firstName":"Minicabit",
+    "lastName":"Email"
+  },
+
+  "contactInformation": {
+    "email":"minicabitbookingemails@gmail.com",
+    "mobileNumber":"01234567890",
+    "password":"a2B4rmXYZ",
+    "confirmPassword":"a2B4rmXYZ"
+  }
+}

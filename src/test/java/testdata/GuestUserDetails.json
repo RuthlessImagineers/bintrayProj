@@ -1,0 +1,32 @@
+{
+  "User": "guest",
+  "yourDetails": {
+    "title":"Mr",
+    "firstName":"",
+    "lastName":""
+  },
+
+  "contactInformation": {
+    "email":"",
+    "confirmEmail":"",
+    "mobileNumber":"",
+    "confirmMobileNumber":""
+  },
+  "additionalInformation" : {
+    "luggageDetails":"",
+    "flightNo":"",
+    "businessTrip":false
+  },
+  "social":{
+    "article":false,
+    "socialMedia":false,
+    "taxiOperator":false
+  },
+  "receiveNewsletter":false,
+  "registerUser": {
+    "saveDetails":false,
+    "password":"",
+    "confirmPassword":""
+  },
+  "termsAndConditions":true
+}
