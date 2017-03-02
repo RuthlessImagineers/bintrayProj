@@ -219,14 +219,19 @@ task startRedisServer() {
         } catch(Exception e) {
 
         } finally {
-            redisServer.stop();
+
         }
     }
 }
 
 def killRedisServer() {
-    doLast{
-        redisServer.stop();
+    "redis-cli shutdown".execute()
+}
+
+
+task killRedis() {
+    doLast {
+        killRedisServer()
     }
 }
 
