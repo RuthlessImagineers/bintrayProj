@@ -48,32 +48,32 @@ $(document).ready(function() {
   $(document).ready(function() {
 
     var chartData = {
-        labels: ["@UUI","@clearTripDetails"],
+        labels: ["@Booking","@e2e","@journeywithvia","@loginAndBook","@regression","@returnjourney","@singlejourney","@smoke","@split-booking"],
         datasets: [
             {
                 label: "Passed",
                 backgroundColor: "#92DD96",
-                data: [50.00, 50.00]
+                data: [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
             },
             {
                 label: "Failed",
                 backgroundColor: "#F2928C",
-                data: [12.50, 12.50]
+                data: [3.57, 3.57, 7.14, 0.00, 3.57, 0.00, 7.14, 4.76, 0.00]
             },
             {
                 label: "Skipped",
                 backgroundColor: "#8AF",
-                data: [37.50, 37.50]
+                data: [96.43, 96.43, 92.86, 100.00, 96.43, 100.00, 92.86, 95.24, 100.00]
             },
             {
                 label: "Pending",
                 backgroundColor: "#F5F28F",
-                data: [0.00, 0.00]
+                data: [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
             },
             {
                 label: "Undefined",
                 backgroundColor: "#F5B975",
-                data: [0.00, 0.00]
+                data: [0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00]
             }
         ]
     };
@@ -134,8 +134,8 @@ $(document).ready(function() {
         <tbody>
           <tr class="info">
             <td>cucumberProject</td>
-                          <td>3/1/17 5:19 PM</td>
-                        <td>01 Mar 2017, 17:19</td>
+                          <td>3/2/17 5:06 PM</td>
+                        <td>02 Mar 2017, 17:06</td>
           </tr>
         </tbody>
       </table>
@@ -197,63 +197,182 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-tag_UUI.html">@UUI</a></td>
+        <td class="tagname"><a href="report-tag_Booking.html">@Booking</a></td>
         
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >81</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">8</td>
+        <td class="total">84</td>
 
         <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td  class="failed"    >12</td>
+        <td class="total">12</td>
 
-        <td class="duration" data-value="133250611348">2m 13s 250ms</td>
+        <td class="duration" data-value="134578103982">2m 14s 578ms</td>
         <td class="failed">Failed</td>
       </tr>
           <tr>
-        <td class="tagname"><a href="report-tag_clearTripDetails.html">@clearTripDetails</a></td>
+        <td class="tagname"><a href="report-tag_e2e.html">@e2e</a></td>
         
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >81</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">8</td>
+        <td class="total">84</td>
 
         <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td  class="failed"    >12</td>
+        <td class="total">12</td>
 
-        <td class="duration" data-value="133250611348">2m 13s 250ms</td>
+        <td class="duration" data-value="134578103982">2m 14s 578ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_journeywithvia.html">@journeywithvia</a></td>
+        
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >39</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">42</td>
+
+        <td >0</td>
+        <td  class="failed"    >6</td>
+        <td class="total">6</td>
+
+        <td class="duration" data-value="134578103982">2m 14s 578ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_loginAndBook.html">@loginAndBook</a></td>
+        
+        <td >0</td>
+        <td >0</td>
+        <td     class="skipped"   >21</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">21</td>
+
+        <td >0</td>
+        <td  class="failed"    >3</td>
+        <td class="total">3</td>
+
+        <td class="duration" data-value="0">000ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_regression.html">@regression</a></td>
+        
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >81</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">84</td>
+
+        <td >0</td>
+        <td  class="failed"    >12</td>
+        <td class="total">12</td>
+
+        <td class="duration" data-value="134578103982">2m 14s 578ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_returnjourney.html">@returnjourney</a></td>
+        
+        <td >0</td>
+        <td >0</td>
+        <td     class="skipped"   >21</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">21</td>
+
+        <td >0</td>
+        <td  class="failed"    >3</td>
+        <td class="total">3</td>
+
+        <td class="duration" data-value="0">000ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_singlejourney.html">@singlejourney</a></td>
+        
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >39</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">42</td>
+
+        <td >0</td>
+        <td  class="failed"    >6</td>
+        <td class="total">6</td>
+
+        <td class="duration" data-value="134578103982">2m 14s 578ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_smoke.html">@smoke</a></td>
+        
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >60</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">63</td>
+
+        <td >0</td>
+        <td  class="failed"    >9</td>
+        <td class="total">9</td>
+
+        <td class="duration" data-value="134578103982">2m 14s 578ms</td>
+        <td class="failed">Failed</td>
+      </tr>
+          <tr>
+        <td class="tagname"><a href="report-tag_split-booking.html">@split-booking</a></td>
+        
+        <td >0</td>
+        <td >0</td>
+        <td     class="skipped"   >21</td>
+        <td >0</td>
+        <td >0</td>
+        <td class="total">21</td>
+
+        <td >0</td>
+        <td  class="failed"    >3</td>
+        <td class="total">3</td>
+
+        <td class="duration" data-value="0">000ms</td>
         <td class="failed">Failed</td>
       </tr>
       </tbody>
 
   <tfoot class="total">
     <tr>
-      <td>2</td>
-            <td>8</td>
-      <td>2</td>
-      <td>6</td>
+      <td>9</td>
+            <td>0</td>
+      <td>18</td>
+      <td>444</td>
       <td>0</td>
       <td>0</td>
-      <td>16</td>
+      <td>462</td>
 
       <td>0</td>
-      <td>2</td>
-      <td>2</td>
+      <td>66</td>
+      <td>66</td>
 
-      <td class="duration">4m 26s 501ms</td>
+      <td class="duration">13m 27s 468ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-            <td>50.00%</td>
-      <td>12.50%</td>
-      <td>37.50%</td>
+            <td>0.00%</td>
+      <td>3.90%</td>
+      <td>96.10%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>

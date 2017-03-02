@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittests.FilesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-02T11:49:47" hostname="Krishnanands-MacBook-Pro-2.local" time="0.003">
+  <properties/>
+  <testcase name="fileExistsTest" classname="unittests.FilesTest" time="0.003"/>
+  <system-out><![CDATA[/Users/krishnanand/Development/personal_projects/bintrayProj/src/test/java/testdata/JourneyDetails.json
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

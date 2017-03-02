@@ -13,7 +13,7 @@
         "appiumServerCapabilities": {
           "app": "app-release.apk",
           "platformName": "Android",
-          "newCommandTimeout": 180
+          "newCommandTimeout": 60,
         },
         "androidOnlyCapabilities": {
           "appActivity": "com.softheme.minicabit.activity.SplashActivity",
@@ -24,9 +24,9 @@
       },
       "deviceState": {
         "clearNotification": false,
-        "clearADBLogs": true,
-        "grantAllPermissions": true,
-        "captureVideo": true
+        "clearADBLogs": false,
+        "grantAllPermissions": false,
+        "captureVideo": false
       }
     }
   ]

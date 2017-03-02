@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="unittests.CollectionsFrequencyTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-02T11:49:47" hostname="Krishnanands-MacBook-Pro-2.local" time="0.0">
+  <properties/>
+  <testcase name="test" classname="unittests.CollectionsFrequencyTest" time="0.0"/>
+  <system-out><![CDATA[0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

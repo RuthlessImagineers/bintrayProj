@@ -50,9 +50,9 @@ $(document).ready(function() {
     var chartData = {
         datasets: [{
             data: [
-                4,
-                1,
+                0,
                 3,
+                81,
                 0,
                 0
             ],
@@ -93,7 +93,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 8) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 84) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -107,7 +107,7 @@ $(document).ready(function() {
         datasets: [{
             data: [
                 0,
-                1
+                12
             ],
             backgroundColor: [
                 "#00B000",
@@ -143,7 +143,7 @@ $(document).ready(function() {
                         var allData = data.datasets[tooltipItem.datasetIndex].data;
                         var tooltipLabel = data.labels[tooltipItem.index];
                         var tooltipData = allData[tooltipItem.index];
-                        var tooltipPercentage = Math.round(10000 * tooltipData / 1) / 100;
+                        var tooltipPercentage = Math.round(10000 * tooltipData / 12) / 100;
                         return tooltipLabel + ": " + tooltipData + " (" + tooltipPercentage + "%)";
                     }
                 }
@@ -232,8 +232,8 @@ $(document).ready(function() {
         <tbody>
           <tr class="info">
             <td>cucumberProject</td>
-                          <td>3/1/17 5:19 PM</td>
-                        <td>01 Mar 2017, 17:19</td>
+                          <td>3/2/17 5:06 PM</td>
+                        <td>02 Mar 2017, 17:06</td>
           </tr>
         </tbody>
       </table>
@@ -302,7 +302,6 @@ $(document).ready(function() {
   
 <thead>
   <tr class="header dont-sort">
-          <th></th>
         <th></th>
     <th colspan="6">Steps</th>
     <th colspan="3">Scenarios</th>
@@ -310,7 +309,6 @@ $(document).ready(function() {
   </tr>
   <tr>
     <th>Feature</th>
-          <th>Device</th>
         <th class="passed">Passed</th>
     <th class="failed">Failed</th>
     <th class="skipped">Skipped</th>
@@ -330,21 +328,20 @@ $(document).ready(function() {
 
   <tbody>
           <tr>
-        <td class="tagname"><a href="report-feature_UnitUI-feature_ZY223D7XPB.html">Unit User Interface tests</a></td>
-                  <td>ZY223D7XPB</td>
+        <td class="tagname"><a href="report-feature_-Users-krishnanand-Development-personal_projects-bintrayProj-build-RunnableFeatures-Booking-feature.html">User Booking</a></td>
         
-        <td      class="passed"    >4</td>
-        <td      class="failed"    >1</td>
-        <td     class="skipped"   >3</td>
+        <td >0</td>
+        <td      class="failed"    >3</td>
+        <td     class="skipped"   >81</td>
         <td >0</td>
         <td >0</td>
-        <td class="total">8</td>
+        <td class="total">84</td>
 
         <td >0</td>
-        <td  class="failed"    >1</td>
-        <td class="total">1</td>
+        <td  class="failed"    >12</td>
+        <td class="total">12</td>
 
-        <td class="duration" data-value="133250611348">2m 13s 250ms</td>
+        <td class="duration" data-value="134578103982">2m 14s 578ms</td>
         <td class="failed">Failed</td>
       </tr>
       </tbody>
@@ -352,27 +349,25 @@ $(document).ready(function() {
   <tfoot class="total">
     <tr>
       <td>1</td>
-              <td>-</td>
-            <td>4</td>
-      <td>1</td>
+            <td>0</td>
       <td>3</td>
+      <td>81</td>
       <td>0</td>
       <td>0</td>
-      <td>8</td>
+      <td>84</td>
 
       <td>0</td>
-      <td>1</td>
-      <td>1</td>
+      <td>12</td>
+      <td>12</td>
 
-      <td class="duration">2m 13s 250ms</td>
+      <td class="duration">2m 14s 578ms</td>
       <td></td>
     </tr>
     <tr>
       <td></td>
-              <td>-</td>
-            <td>50.00%</td>
-      <td>12.50%</td>
-      <td>37.50%</td>
+            <td>0.00%</td>
+      <td>3.57%</td>
+      <td>96.43%</td>
       <td>0.00%</td>
       <td>0.00%</td>
       <td></td>
