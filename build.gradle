@@ -126,18 +126,13 @@ def runDeviceFragmentation(List<String> udidList) {
 task runDistribution(dependsOn: ['optimusSetup', 'clean', 'featureCollector']) {
     featureCollector.outputs.upToDateWhen { false }
     doLast {
-        try {
-            List<String> udidList = getDevicesForThisTestRun()
-            def fileDirectory = tasks.featureCollector.outputs;
-            FileCollection fileCollection = fileDirectory.getFiles();
-            List<File> list = fileCollection.asList();
-            println "Runnable Features are available in this path -- " + list.get(0).getAbsolutePath();
-            File file = list.get(0);
-        } catch(Exception e) {
-            e.printStackTrace()
-        } finally {
-            killRedisServer()
-        }
+        List<String> udidList = getDevicesForThisTestRun()
+        def fileDirectory = tasks.featureCollector.outputs;
+        FileCollection fileCollection = fileDirectory.getFiles();
+        List<File> list = fileCollection.asList();
+        println "Runnable Features are available in this path -- " + list.get(0).getAbsolutePath();
+        File file = list.get(0);
+        killRedisServer();
     }
 }
 
