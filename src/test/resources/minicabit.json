@@ -13,7 +13,7 @@
         "appiumServerCapabilities": {
           "app": "app-release.apk",
           "platformName": "Android",
-          "newCommandTimeout": 60,
+          "newCommandTimeout": 60
         },
         "androidOnlyCapabilities": {
           "appActivity": "com.softheme.minicabit.activity.SplashActivity",
