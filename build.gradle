@@ -132,6 +132,7 @@ task runDistribution(dependsOn: ['optimusSetup', 'clean', 'featureCollector']) {
         List<File> list = fileCollection.asList();
         println "Runnable Features are available in this path -- " + list.get(0).getAbsolutePath();
         File file = list.get(0);
+        runFunctionalDistribution(udidList, file.listFiles())
         killRedisServer();
     }
 }
