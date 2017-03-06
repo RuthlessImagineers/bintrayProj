@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="unittests.NumberConversionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-02T11:49:47" hostname="Krishnanands-MacBook-Pro-2.local" time="0.004">
+<testsuite name="unittests.NumberConversionTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-06T08:57:05" hostname="Krishnanands-MacBook-Pro-2.local" time="0.005">
   <properties/>
-  <testcase name="numberConvTests" classname="unittests.NumberConversionTests" time="0.004"/>
+  <testcase name="numberConvTests" classname="unittests.NumberConversionTests" time="0.005"/>
   <system-out><![CDATA[£14.43
 £111.23
 ]]></system-out>

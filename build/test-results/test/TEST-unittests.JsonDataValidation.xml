@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="unittests.JsonDataValidation" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-03-02T11:49:47" hostname="Krishnanands-MacBook-Pro-2.local" time="0.103">
+<testsuite name="unittests.JsonDataValidation" tests="2" skipped="0" failures="0" errors="0" timestamp="2017-03-06T08:57:05" hostname="Krishnanands-MacBook-Pro-2.local" time="0.085">
   <properties/>
-  <testcase name="verifyValidCardDetails" classname="unittests.JsonDataValidation" time="0.098"/>
-  <testcase name="verifyLuggageDetails" classname="unittests.JsonDataValidation" time="0.005"/>
+  <testcase name="verifyValidCardDetails" classname="unittests.JsonDataValidation" time="0.077"/>
+  <testcase name="verifyLuggageDetails" classname="unittests.JsonDataValidation" time="0.007"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

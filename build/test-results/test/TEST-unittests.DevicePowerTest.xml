@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="unittests.DevicePowerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-02T11:49:47" hostname="Krishnanands-MacBook-Pro-2.local" time="0.003">
+<testsuite name="unittests.DevicePowerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-06T08:57:05" hostname="Krishnanands-MacBook-Pro-2.local" time="0.004">
   <properties/>
-  <testcase name="devicePowerTest" classname="unittests.DevicePowerTest" time="0.003"/>
+  <testcase name="devicePowerTest" classname="unittests.DevicePowerTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

@@ -80,16 +80,9 @@ def String getAppJson(String fileName) {
 
 task runFragmentation(dependsOn: ['optimusSetup', 'classes']) {
     doLast {
-        try {
             List<String> udidList = getDevicesForThisTestRun()
             println udidList
             runDeviceFragmentation(udidList)
-            killRedisServer()
-        } catch (Exception e) {
-
-        } finally {
-            killRedisServer()
-        }
     }
 }
 
@@ -133,7 +126,6 @@ task runDistribution(dependsOn: ['optimusSetup', 'clean', 'featureCollector']) {
         println "Runnable Features are available in this path -- " + list.get(0).getAbsolutePath();
         File file = list.get(0);
         runFunctionalDistribution(udidList, file.listFiles())
-        killRedisServer();
     }
 }
 
@@ -167,6 +159,7 @@ private List<String> getDevicesForThisTestRun() {
 task reportDistribution() {
     doLast {
         generateReport(false)
+        killRedisServer()
     }
 }
 
@@ -174,6 +167,7 @@ task reportDistribution() {
 task reportFragmentation() {
     doLast {
         generateReport(true)
+        killRedisServer()
     }
 }
 
@@ -224,11 +218,5 @@ def killRedisServer() {
     "redis-cli shutdown".execute()
 }
 
-
-task killRedis() {
-    doLast {
-        killRedisServer()
-    }
-}
 
 
