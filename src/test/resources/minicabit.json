@@ -6,7 +6,7 @@
   "testFeed": [
     {
       "belongsTo": "minicabit",
-      "runsOn": "device",
+      "runsOn": "any",
       "nativeApp": true,
       "appDir": "app",
       "optimusDesiredCapabilities": {
