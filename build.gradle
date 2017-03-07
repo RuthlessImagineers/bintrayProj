@@ -204,6 +204,7 @@ def RedisServer redisServer;
 task startRedisServer() {
     doLast{
         try {
+            killRedisServer()
             redisServer = new RedisServer();
             redisServer.start();
         } catch(Exception e) {
