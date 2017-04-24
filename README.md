@@ -1,13 +1,14 @@
-#Optimus Template
+# Optimus Template  [![npm version](https://badge.fury.io/js/optimus-cli.svg)](https://badge.fury.io/js/optimus-cli) [![Gitter chat](https://badges.gitter.im/optimus_support/optimus.png)](https://gitter.im/optimus_support/optimus)
+
 Optimus Template is the native framework for Optimus, designed to help you
 to get started with your tests in the swiftest time possible.
 
-####First things first
+#### First things first
 Before you get your hands on Optimus Template, please make sure your system meets the desired
 [prerequisites](Prerequisites.md)
 
-##Getting started with Optimus Template
-You can either fork Optimus Template repository or download the bundle from [here](//set link here).
+## Getting started with Optimus Template
+You can either fork Optimus Template repository or download the bundle from [here](https://github.com/testvagrant/optimusTemplate/archive/master.zip).
 
 If you have forked Optimus Template, you can clone from your fork to your machine using
 
@@ -60,7 +61,7 @@ the power of Optimus through them.
     <b>StartingSteps.java</b>: For Optimus Template use only.
    </pre>
 
-###Your First Test
+### Your First Test
 Writing tests in Optimus is no different than the tests you write everyday,
 except that it does most of the heavy lifting, helping you to focus entirely on the test, 
 thus the philosophy of Optimus
@@ -152,6 +153,19 @@ Open your terminal and navigate to your project folder
 and try below command.
 
 ```bash
+./gradlew runFragmentation -DtestFeed="helloOptimus" -Dtags=@helloOptimus
+```
+
+or
+
+```bash
+./gradlew runDistribution -DtestFeed="helloOptimus" -Dtags=@helloOptimus
+
+```
+
+In case you have a gradle distribution on local you can run below commands
+
+```bash
 gradle runFragmentation -DtestFeed="helloOptimus" -Dtags=@helloOptimus
 ```
  or
@@ -167,7 +181,7 @@ After all the initial setup process you will be able to see `optimushello` app a
 Kudos for your first successful test with Optimus. Now that you have reached here, let us understand the basic features and building blocks of Optimus.
 
 
-##Features
+## Features
 With Optimus, you will be able to write tests capable of running in below modes without ever having to worry about managing servers or device setup.
 
     * Distributed Mode
@@ -187,8 +201,8 @@ giving you complete control of your tests execution. Any Test Feed will contain 
 
     * Common Attributes
     * Appium Server Capabilities
-    * Android Only Capabilities
-    * Device State
+    * Android or iOS Only Capabilities
+
 
 #### Common Attributes
 These attributes are set across all tests running on a common test feed.
@@ -200,7 +214,7 @@ These attributes are set across all tests running on a common test feed.
         <b>Application Directory</b>: Specifies the folder name where the application under test is placed.
        </pre>
 
-#####Example
+##### Example
 
 ![](docs/CommonAttributes.png)
 
@@ -217,7 +231,7 @@ all it needs are a couple of capabilities.
    <b>Platform Name</b>: Specifies the platform to run the application on.
    </pre>
 
-#####Example 
+##### Example 
 ![](docs/AppiumServerCapabilities.png)
 
 These capabilities will be sufficient enough to run most of the tests if not all.
@@ -228,17 +242,6 @@ Under which circumstances you may choose to provide additional
 Optimus supports all android related capabilities as specified [here](https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/caps.md).
 Optimus does not enforce any of these capabilities to be set for running your tests.
 However you are free to provide as many capabilities as you may need.
-
-#### Device State
-Optimus while being extremely faithful to Appium in terms of capabilities,
-it does provide few handy capabilities out of box which resolves many dire issues of mobile automation.
-
-    * Clear Notification
-    * Clear ADB logs
-    * Grant All Permissions
-    * Capture Video
-
-All these capabilities are boolean flags which by themselves are self-descriptive.
 
 #### Supported Platforms
     * Android - SDK Emulators, Genymotion Emulators and all devices

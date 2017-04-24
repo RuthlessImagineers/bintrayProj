@@ -30,7 +30,7 @@ buildscript {
         classpath "org.codehaus.gpars:gpars:1.2.1"
         classpath "net.masterthought:cucumber-reporting:3.3.0"
         classpath "gradle.plugin.com.testvagrant.featureCollector:FeatureCollector:1.1.1"
-        classpath "com.testvagrant:optimus:1.3.5"
+        classpath "com.testvagrant:optimus:1.+"
         classpath "com.github.kstyrc:embedded-redis:0.6"
     }
 
@@ -50,21 +50,18 @@ dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.2.0'
     compile('org.seleniumhq.selenium:selenium-java:2.53.1')
     compile 'cglib:cglib:3.2.4'
-    compile 'com.testvagrant:optimus:1.3.5'
+    compile 'com.testvagrant:optimus:1.+'
     compile group: 'com.github.kstyrc', name: 'embedded-redis', version: '0.6'
-    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.1'
-    compile group: 'org.atteo', name: 'evo-inflector', version: '1.2.1'
+
 
     testCompile('com.google.inject:guice:3.0')
     testCompile(group: 'com.googlecode.lambdaj', name: 'lambdaj', version: '2.3.3')
     testCompile(group: 'org.json', name: 'json', version: '20131018')
-    compile group: 'joda-time', name: 'joda-time', version: '2.9.7'
-
 }
 
 
 
-task optimusSetup(type: JavaExec, dependsOn: ['startRedisServer','classes']) {
+task optimusSetup(type: JavaExec, dependsOn: ['killRedisServer', 'startRedisServer', 'classes']) {
     main = 'com.testvagrant.optimus.OptimusMain'
     classpath = sourceSets.test.runtimeClasspath
 }
@@ -80,9 +77,9 @@ def String getAppJson(String fileName) {
 
 task runFragmentation(dependsOn: ['optimusSetup', 'classes']) {
     doLast {
-            List<String> udidList = getDevicesForThisTestRun()
-            println udidList
-            runDeviceFragmentation(udidList)
+        List<String> udidList = getDevicesForThisTestRun()
+        println udidList
+        runDeviceFragmentation(udidList)
     }
 }
 
@@ -120,6 +117,7 @@ task runDistribution(dependsOn: ['optimusSetup', 'clean', 'featureCollector']) {
     featureCollector.outputs.upToDateWhen { false }
     doLast {
         List<String> udidList = getDevicesForThisTestRun()
+
         def fileDirectory = tasks.featureCollector.outputs;
         FileCollection fileCollection = fileDirectory.getFiles();
         List<File> list = fileCollection.asList();
@@ -131,8 +129,10 @@ task runDistribution(dependsOn: ['optimusSetup', 'clean', 'featureCollector']) {
 
 
 def runFunctionalDistribution(List<String> udidList, File[] allFiles) {
+
     def size = udidList.size()
     println "pool size -- " + size
+
     GParsPool.withPool(size) {
         allFiles.eachParallel { File file ->
             javaexec {
@@ -159,7 +159,6 @@ private List<String> getDevicesForThisTestRun() {
 task reportDistribution() {
     doLast {
         generateReport(false)
-        killRedisServer()
     }
 }
 
@@ -167,17 +166,18 @@ task reportDistribution() {
 task reportFragmentation() {
     doLast {
         generateReport(true)
-        killRedisServer()
     }
 }
 
 def generateReport(Boolean isFragmentation) {
     def jsonReports = fileTree(dir: "${reporting.baseDir}/cucumber/").include '**/*.json'.toString()
     File reportOutputDirectory = new File("${reporting.baseDir}/cucumber");
+
     List<String> jsonReportFiles = new ArrayList<String>();
     jsonReports.each { File file ->
         jsonReportFiles.add("${reporting.baseDir}/cucumber/${file.name}".toString());
     }
+
     String buildNumber = DateFormat.instance.format(new Date())
     String projectName = "cucumberProject";
     boolean runWithJenkins = false;
@@ -196,28 +196,24 @@ def generateReport(Boolean isFragmentation) {
 
 }
 
-
-runDistribution.finalizedBy(reportDistribution)
-runFragmentation.finalizedBy(reportFragmentation)
-
 def RedisServer redisServer;
 task startRedisServer() {
-    doLast{
-        try {
-            killRedisServer()
-            redisServer = new RedisServer();
-            redisServer.start();
-        } catch(Exception e) {
-
-        } finally {
-
-        }
+    doLast {
+        redisServer = new RedisServer();
+        redisServer.start();
     }
 }
 
-def killRedisServer() {
-    "redis-cli shutdown".execute()
+task killRedisServer() {
+    doLast {
+        "redis-cli shutdown".execute()
+    }
 }
 
+
+
+
+runDistribution.finalizedBy(reportDistribution)
+runFragmentation.finalizedBy(reportFragmentation)
 
 
