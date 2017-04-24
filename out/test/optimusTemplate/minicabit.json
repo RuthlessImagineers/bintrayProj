@@ -1,0 +1,33 @@
+{
+  "executionDetails": {
+    "appium_js_path": "/usr/local/bin/appium",
+    "appium_node_path": "/usr/local/bin/node"
+  },
+  "testFeed": [
+    {
+      "belongsTo": "minicabit",
+      "runsOn": "any",
+      "nativeApp": true,
+      "appDir": "app",
+      "optimusDesiredCapabilities": {
+        "appiumServerCapabilities": {
+          "app": "app-release.apk",
+          "platformName": "Android",
+          "newCommandTimeout": 60
+        },
+        "androidOnlyCapabilities": {
+          "appActivity": "com.softheme.minicabit.activity.SplashActivity",
+          "appPackage": "com.minicabit.android",
+          "avdLaunchTimeout": 300000,
+          "useKeystore": false
+        }
+      },
+      "deviceState": {
+        "clearNotification": false,
+        "clearADBLogs": false,
+        "grantAllPermissions": false,
+        "captureVideo": false
+      }
+    }
+  ]
+}

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bintrayProj.iml" filepath="$PROJECT_DIR$/.idea/modules/bintrayProj.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bintrayProj_main.iml" filepath="$PROJECT_DIR$/.idea/modules/bintrayProj_main.iml" group="bintrayProj" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bintrayProj_test.iml" filepath="$PROJECT_DIR$/.idea/modules/bintrayProj_test.iml" group="bintrayProj" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/optimusTemplate.iml" filepath="$PROJECT_DIR$/.idea/modules/optimusTemplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/optimusTemplate_main.iml" filepath="$PROJECT_DIR$/.idea/modules/optimusTemplate_main.iml" group="optimusTemplate" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/optimusTemplate_test.iml" filepath="$PROJECT_DIR$/.idea/modules/optimusTemplate_test.iml" group="optimusTemplate" />
     </modules>
   </component>
 </project>
