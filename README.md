@@ -231,7 +231,7 @@ all it needs are a couple of capabilities.
    <b>Platform Name</b>: Specifies the platform to run the application on.
    </pre>
 
-##### Example 
+##### Example
 ![](docs/AppiumServerCapabilities.png)
 
 These capabilities will be sufficient enough to run most of the tests if not all.

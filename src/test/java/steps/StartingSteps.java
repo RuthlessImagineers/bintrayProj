@@ -1,9 +1,9 @@
 package steps;
 
 import com.google.common.base.CaseFormat;
+import com.testvagrant.commons.entities.SmartBOT;
 import com.testvagrant.optimus.device.OptimusController;
 
-import com.testvagrant.optimus.entity.SmartBOT;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -25,7 +25,7 @@ public class StartingSteps extends BaseSteps {
     public void setUp(Scenario scenario) throws Exception {
         String testFeed = System.getProperty("testFeed") + ".json";
         System.out.println("file name -- " + testFeed);
-        controller = new OptimusController(getAppJson(testFeed),getUniqueScenarioName(scenario));
+        controller = new OptimusController(getAppJson(testFeed),scenario);
         smartBOTs = controller.registerSmartBOTs();
         optimus = new OptimusImpl(having(smartBOTs));
         pageStore = new PageStore();

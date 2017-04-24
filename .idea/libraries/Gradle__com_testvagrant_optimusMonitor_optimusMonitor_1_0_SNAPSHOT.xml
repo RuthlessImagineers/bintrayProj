@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Gradle: com.testvagrant.optimusMonitor:optimusMonitor:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/testvagrant/optimusMonitor/optimusMonitor/1.0-SNAPSHOT/optimusMonitor-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

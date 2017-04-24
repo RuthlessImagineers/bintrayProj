@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="unittests.InflectorTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-06T08:57:05" hostname="Krishnanands-MacBook-Pro-2.local" time="0.009">
-  <properties/>
-  <testcase name="pluralTest" classname="unittests.InflectorTest" time="0.009"/>
-  <system-out><![CDATA[Medium suitcases (67 x 45 x 28 cm)
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

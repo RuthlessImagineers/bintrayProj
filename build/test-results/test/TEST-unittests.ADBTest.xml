@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="unittests.ADBTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2017-03-06T08:57:05" hostname="Krishnanands-MacBook-Pro-2.local" time="0.012">
-  <properties/>
-  <testcase name="osTest" classname="unittests.ADBTest" time="0.012"/>
-  <system-out><![CDATA[[Ljava.lang.String;@589416cf
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
