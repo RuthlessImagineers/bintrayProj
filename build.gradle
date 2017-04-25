@@ -75,7 +75,7 @@ dependencies {
 
 
 
-task optimusSetup(type: JavaExec, dependsOn: ['rethinkSetup','killRedisServer', 'startRedisServer', 'classes']) {
+task optimusSetup(type: JavaExec, dependsOn: ['rethinkSetup', 'classes']) {
     main = 'com.testvagrant.optimus.OptimusMain'
     classpath = sourceSets.test.runtimeClasspath
 }

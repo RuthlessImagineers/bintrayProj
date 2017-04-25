@@ -19,18 +19,18 @@ Feature: As a user of Minicabit, I should be able to register for ease of bookin
     When  On PassengerDetails page I try to register a user without entering details
     Then On PassengerDetails page I should be receive a suggestion of missing fields
 
-  @mandatoryFieldOneByOne
+  @mandatoryFieldOneByOne  @check
   Scenario Outline: As a new user I should not be able to register missing one of the mandatory details
     Given From Homepage I navigate to passenger details page to create a new account
     When  On PassengerDetails page I try to register a user without entering <mandatoryField> detail
     Then On PassengerDetails page I should be receive a suggestion of missing field <mandatoryField>
 
     Examples:
-      |mandatoryField   |
-      |title            |
-      |first_name       |
-      |last_name        |
-      |email            |
-      |mobile_number    |
-      |password         |
-      |confirm_password |
+      | mandatoryField   |
+      | title            |
+      | first_name       |
+#      | last_name        |
+#      | email            |
+#      | mobile_number    |
+#      | password         |
+#      | confirm_password |
