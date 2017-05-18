@@ -2,8 +2,12 @@ package steps;
 
 import com.google.common.base.CaseFormat;
 import com.testvagrant.commons.entities.SmartBOT;
+import com.testvagrant.monitor.MongoMain;
+import com.testvagrant.optimus.OptimusMain;
 import com.testvagrant.optimus.device.OptimusController;
 
+import com.testvagrant.optimus.register.DeviceRegistrar;
+import com.testvagrant.optimus.utils.DeviceMatrix;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -23,6 +27,7 @@ public class StartingSteps extends BaseSteps {
 
     @Before
     public void setUp(Scenario scenario) throws Exception {
+        OptimusMain.init();
         String testFeed = System.getProperty("testFeed") + ".json";
         System.out.println("file name -- " + testFeed);
         controller = new OptimusController(getAppJson(testFeed),scenario);

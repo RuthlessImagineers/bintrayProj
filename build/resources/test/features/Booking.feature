@@ -2,7 +2,7 @@
 Feature: User Booking
   As a user I should be able to book a cab from A to B.
 
-  @smoke @singlejourney @journeywithvia @e2e @regression @check
+  @smoke @singlejourney @journeywithvia @e2e @regression
   Scenario Outline: Make a booking for a cab with luggage
     Given On Homepage I enter trip details for trip type <tripDetails> and with luggage <additionalLuggage>
     And On Homepage I choose a cab of payment type <paymentType>
@@ -19,7 +19,7 @@ Feature: User Booking
 #      | singlejourney  |    Luggage                    | LoginDetails |existingcard |      NA        |       NA      |
 #      | journeywithvia |    Luggage                    | LoginDetails | cash        |      NA        |       NA      |
 #      | journeywithvia |    Luggage                    | LoginDetails | card        |ValidCardDetails|AmericanExpress|
-    | journeywithvia |    Luggage                    | LoginDetails |existingcard |      NA        |       NA      |
+#    | journeywithvia |    Luggage                    | LoginDetails |existingcard |      NA        |       NA      |
 
 
     @smoke @returnjourney @e2e @split-booking @regression

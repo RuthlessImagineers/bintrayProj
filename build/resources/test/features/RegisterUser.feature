@@ -28,7 +28,7 @@ Feature: As a user of Minicabit, I should be able to register for ease of bookin
     Examples:
       | mandatoryField   |
       | title            |
-      | first_name       |
+#      | first_name       |
 #      | last_name        |
 #      | email            |
 #      | mobile_number    |
