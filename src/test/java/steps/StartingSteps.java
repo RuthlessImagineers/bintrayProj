@@ -2,12 +2,8 @@ package steps;
 
 import com.google.common.base.CaseFormat;
 import com.testvagrant.commons.entities.SmartBOT;
-import com.testvagrant.monitor.MongoMain;
 import com.testvagrant.optimus.OptimusMain;
 import com.testvagrant.optimus.device.OptimusController;
-
-import com.testvagrant.optimus.register.DeviceRegistrar;
-import com.testvagrant.optimus.utils.DeviceMatrix;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -19,7 +15,9 @@ import utils.PageStore;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 public class StartingSteps extends BaseSteps {
@@ -27,10 +25,10 @@ public class StartingSteps extends BaseSteps {
 
     @Before
     public void setUp(Scenario scenario) throws Exception {
-        OptimusMain.init();
         String testFeed = System.getProperty("testFeed") + ".json";
         System.out.println("file name -- " + testFeed);
-        controller = new OptimusController(getAppJson(testFeed),scenario);
+        OptimusMain.main(new String[]{testFeed});
+        controller = new OptimusController(getAppJson(testFeed), scenario);
         smartBOTs = controller.registerSmartBOTs();
         optimus = new OptimusImpl(having(smartBOTs));
         pageStore = new PageStore();
@@ -69,7 +67,7 @@ public class StartingSteps extends BaseSteps {
 
 
     private String getUniqueScenarioName(Scenario scenario) {
-        ArrayList<String> scenariosList = new ArrayList<String>();
+        ArrayList<String> scenariosList = new ArrayList<>();
         String uniqueScenarioName;
         String scenarioName = scenario.getName();
         int frequency = 1;
